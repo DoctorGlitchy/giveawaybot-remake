@@ -7,10 +7,10 @@ module.exports = {
             //You have successfully left the giveaway!
             giveaway.Entries = giveaway.Entries.filter(item => item !== interaction.user.id);
             await giveaway.save();
-            interaction.update({ embeds: [], components: [], content: '🎉 You have successfully left the giveaway!' })
+            interaction.update({ embeds: [], components: [], content: '🎉 You have successfully left the giveaway!' }, ehpemeral: true)
         } else {
             //You are not entered in this giveaway!
-            interaction.update({ embeds: [], components: [], content: '💥 You are not entered in this giveaway!' })
+            interaction.update({ embeds: [], components: [], content: '💥 You are not entered in this giveaway!' }, ehpemeral: true)
         }
     }
 }
